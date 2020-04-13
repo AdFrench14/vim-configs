@@ -1,7 +1,7 @@
-call plug#begin('/home/adrien/.local/share/nvim/site/plugged')
+call plug#begin('/Users/afrench/.local/share/nvim/site/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'dense-analysis/ale'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
@@ -17,7 +17,7 @@ set number
 set termguicolors
 
 "python environment configs
-let g:python3_host_prog = '/home/adrien/.local/share/nvim/site/neovim-venv/bin/python'
+let g:python3_host_prog = '/Users/afrench/.local/share/nvim/site/neovim-venv/bin/python'
 
 " NERDTree configs
 autocmd vimenter * NERDTree
