@@ -1,8 +1,8 @@
 call plug#begin('/home/adrien/.local/share/nvim/site/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'dense-analysis/ale'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'morhetz/gruvbox'
+Plug 'shougo/deoplete'
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'jlanzarotta/bufexplorer'
@@ -15,6 +15,7 @@ call plug#end()
 set tabstop=4 shiftwidth=4 expandtab
 set number
 set termguicolors
+set completeopt -=preview
 
 "python environment configs
 let g:python3_host_prog = '/home/adrien/.local/share/nvim/site/neovim-venv/bin/python'
@@ -33,7 +34,8 @@ let b:ale_fixers = {
 \}
 
 "deoplete configs
-"let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_delay = 100
 
 "Colour configs
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
