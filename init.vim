@@ -1,13 +1,13 @@
 call plug#begin('/home/adrien/.local/share/nvim/site/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'dense-analysis/ale'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 "General Vim Configs
@@ -25,17 +25,31 @@ autocmd vimenter * NERDTree
 let NERDTreeShowHidden = 1
 
 "ALE configs
-let g:ale_linters = {
-\ 	'javascript':['eslint'],
-\   'rust':['rls']
-\}
-let b:ale_fixers = {
-\   'rust':['rustfmt']
-\}
+"let g:ale_linters = {
+"\ 	'javascript':['eslint'],
+"\   'rust':['rls']
+"\}
+
+"COC configs
+let g:coc_global_extensions = [
+  \ 'coc-pairs',
+  \ 'coc-eslint', 
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ 'coc-rls'
+  \ ]
+
+"COC - use Tab and Shift-Tab to navigate suggestions
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+"let b:ale_fixers = {
+"\   'rust':['rustfmt']
+"\}
 
 "deoplete configs
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 100
+"let g:deoplete#enable_at_startup = 1
+"let g:deoplete#auto_complete_delay = 100
 
 "Colour configs
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
