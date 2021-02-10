@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/afrench/Projects/LPM/alias-service/mock_data'
+let g:netrw_dirhist_6='/Users/afrench/Projects/TheScientist/ts-website'
+let g:netrw_dirhist_5='/Users/afrench/Projects/LabManager/lm-website/routes/api'
+let g:netrw_dirhist_4='/Users/afrench/Projects/LabManager/lm-website'
+let g:netrw_dirhist_3='/Users/afrench'
+let g:netrw_dirhist_2='/Users/afrench/Projects/LPM/institutions-endpoint'
+let g:netrw_dirhist_1='/Users/afrench/Projects/LPM/institutions-subscriptions-service'
