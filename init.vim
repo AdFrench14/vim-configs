@@ -1,4 +1,4 @@
-call plug#begin('/Users/afrench/.local/share/nvim/site/plugged')
+call plug#begin('/home/afrench/.local/share/nvim/site/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
@@ -16,7 +16,7 @@ set termguicolors
 set completeopt -=preview
 
 "python environment configs
-let g:python3_host_prog = '/Users/afrench/.local/share/nvim/site/neovim-venv/bin/python'
+let g:python3_host_prog = '/home/afrench/.local/share/nvim/site/neovim-venv/bin/python'
 
 " NERDTree configs
 autocmd vimenter * NERDTree
@@ -61,3 +61,6 @@ nmap <silent> <leader><S-w> <C-w>p
 "correct in this file
 "
 "npm package neovim needs to be installed (npm install -g neovim)
+"
+"Run this to make sure Vim Plug is installed
+"sh -c 'curl -fLo '${XDG_DATA_HOME:-$HOME/.local/share}'/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
